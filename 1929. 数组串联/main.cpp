@@ -1,4 +1,5 @@
 #include <vector>
+#include <cassert>
 using namespace std;
 
 class Solution {
@@ -14,6 +15,6 @@ public:
 };
 
 int main() {
-    Solution().getConcatenation({ 1, 2, 1 });
-    Solution().getConcatenation({ 1,3,2,1 });
+    assert(Solution().getConcatenation({ 1, 2, 1 }) == (vector<int>{1, 2, 1, 1, 2, 1}));
+    assert(Solution().getConcatenation({ 1,3,2,1 }) == (vector<int>{1, 3, 2, 1, 1, 3, 2, 1}));
 }

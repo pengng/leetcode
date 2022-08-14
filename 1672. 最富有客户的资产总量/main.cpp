@@ -1,4 +1,5 @@
 #include <vector>
+#include <algorithm>
 #include <cassert>
 using namespace std;
 
@@ -6,7 +7,7 @@ class Solution {
 public:
     int maximumWealth(const vector<vector<int>>& accounts) {
         int maximum = 0;
-        for (auto account : accounts)
+        for (auto& account : accounts)
         {
             int sum = 0;
             for (auto wealth : account) sum += wealth;

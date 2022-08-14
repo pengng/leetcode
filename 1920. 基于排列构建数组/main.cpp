@@ -1,4 +1,5 @@
 #include <vector>
+#include <cassert>
 using namespace std;
 
 class Solution {
@@ -14,6 +15,6 @@ public:
 };
 
 int main() {
-    Solution().buildArray({ 0,2,1,5,3,4 });
-    Solution().buildArray({ 5,0,1,2,3,4 });
+    assert(Solution().buildArray({ 0,2,1,5,3,4 }) == (vector<int>{0, 1, 2, 4, 5, 3}));
+    assert(Solution().buildArray({ 5,0,1,2,3,4 }) == (vector<int>{4, 5, 0, 1, 2, 3}));
 }

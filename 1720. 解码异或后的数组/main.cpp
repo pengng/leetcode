@@ -1,4 +1,5 @@
 #include <vector>
+#include <cassert>
 using namespace std;
 
 class Solution {
@@ -13,8 +14,8 @@ public:
 
 int main() {
     vector<int> encoded1{ 1,2,3 };
-    Solution().decode(encoded1, 1);
+    assert(Solution().decode(encoded1, 1) == (vector<int>{1, 0, 2, 1}));
 
     vector<int> encoded2{ 6,2,7,3 };
-    Solution().decode(encoded2, 4);
+    assert(Solution().decode(encoded2, 4) == (vector<int>{4, 2, 0, 7, 4}));
 }
